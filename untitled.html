@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohamed Elkomy | Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary: #4ade80; /* Neon Green */
+            --bg: #000000;
+            --card: #111111;
+            --text: #ffffff;
+            --text-dim: #a0a0a0;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
+
+        @keyframes blink {
+            50% { border-color: transparent }
+        }
+
+        body {
+            background-color: var(--bg);
+            color: var(--text);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        /* Header Section */
+        header {
+            animation: fadeInUp 1s ease-out;
+            margin-bottom: 80px;
+            margin-top: 50px;
+        }
+
+        .logo {
+            font-family: monospace;
+            font-size: 1.8rem;
+            color: var(--primary);
+            margin-bottom: 50px;
+            font-weight: bold;
+        }
+
+        .hi {
+            color: var(--primary);
+            font-size: 1.3rem;
+            font-weight: bold;
+        }
+
+        h1 {
+            font-size: clamp(2.2rem, 7vw, 4rem);
+            margin: 10px 0;
+            font-weight: 900;
+            border-right: 4px solid var(--primary);
+            white-space: nowrap;
+            overflow: hidden;
+            width: fit-content;
+            animation: typing 2s steps(25, end), blink .75s step-end infinite;
+        }
+
+        .title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--text);
+        }
+
+        .bio {
+            color: var(--text-dim);
+            max-width: 750px;
+            font-size: 1.1rem;
+            margin-top: 15px;
+        }
+
+        /* Interaction Buttons */
+        .cta-box {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 35px;
+        }
+
+        .btn {
+            text-decoration: none;
+            color: white;
+            background: var(--card);
+            padding: 12px 25px;
+            border-radius: 8px;
+            border: 1px solid #333;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: bold;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .btn:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary);
+            box-shadow: 0 8px 15px rgba(74, 222, 128, 0.2);
+        }
+
+        /* Sections and Cards */
+        section {
+            margin-top: 80px;
+            animation: fadeInUp 1.5s ease-out;
+        }
+
+        h2 {
+            font-size: 1.8rem;
+            margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        h2 i { color: var(--primary); }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: var(--card);
+            padding: 25px;
+            border-radius: 12px;
+            border: 1px solid #222;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            border-color: var(--primary);
+            background: #161616;
+        }
+
+        .card h3 {
+            margin-top: 0;
+            color: var(--primary);
+            font-size: 1.2rem;
+        }
+
+        /* Skills Tags */
+        .skills-wrap {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .tag {
+            background: #1a1a1a;
+            border: 1px solid #333;
+            padding: 6px 18px;
+            border-radius: 50px;
+            font-size: 0.95rem;
+            transition: 0.3s;
+        }
+
+        .tag:hover {
+            background: var(--primary);
+            color: #000;
+            font-weight: bold;
+        }
+
+        footer {
+            text-align: center;
+            padding: 60px 0 30px;
+            color: var(--text-dim);
+            border-top: 1px solid #222;
+            margin-top: 80px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="logo">{ ELKOMY }</div>
+
+        <header>
+            <div class="hi">Hey there!, I'm-</div>
+            <h1>Mohamed Elkomy.</h1>
+            <div class="title">IT Infrastructure & Software Engineer</div>
+            <p class="bio">
+                A highly motivated IT professional and FinTech specialist. I bridge the gap between secure network administration and modern software development, delivering scalable and reliable technological solutions.
+            </p>
+
+            <div class="cta-box">
+                <a href="https://wa.me/201222215498" class="btn"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                <a href="mailto:elkomy0977@gmail.com" class="btn"><i class="fas fa-envelope"></i> Email</a>
+            </div>
+        </header>
+
+        <section>
+            <h2><i class="fas fa-code"></i> Programming & Web Development</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>C++ Programming</h3>
+                    <p>Expertise in data structures, algorithms, and system-level performance.</p>
+                </div>
+                <div class="card">
+                    <h3>Java Development</h3>
+                    <p>Proficient in Object-Oriented Programming (OOP) and scalable application building.</p>
+                </div>
+                <div class="card">
+                    <h3>PHP & Web Design</h3>
+                    <p>Building dynamic websites with database integration and responsive UI/UX.</p>
+                </div>
+                <div class="card">
+                    <h3>Go (Golang)</h3>
+                    <p>Utilizing Go for high-performance cloud services and concurrent systems.</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2><i class="fas fa-server"></i> IT Infrastructure & Security</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>Cisco CCNA</h3>
+                    <p>Advanced routing, switching, and network security administration.</p>
+                </div>
+                <div class="card">
+                    <h3>Microsoft AZ-800/801</h3>
+                    <p>Managing Windows Server Hybrid Infrastructure and cloud integration.</p>
+                </div>
+                <div class="card">
+                    <h3>Fortinet & Sophos</h3>
+                    <p>Certified in network security engineering and next-gen firewall configuration.</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2><i class="fas fa-graduation-cap"></i> Education</h2>
+            <div class="card" style="width: 100%;">
+                <h3>B.Com in Financial Technology (FinTech)</h3>
+                <p>Tanta University | Expected Graduation: 2028</p>
+            </div>
+        </section>
+
+        <section>
+            <h2><i class="fas fa-bolt"></i> Core Skills</h2>
+            <div class="skills-wrap">
+                <div class="tag">C++</div>
+                <div class="tag">Java</div>
+                <div class="tag">PHP</div>
+                <div class="tag">Go</div>
+                <div class="tag">HTML5 / CSS3</div>
+                <div class="tag">Network Security</div>
+                <div class="tag">Active Directory</div>
+                <div class="tag">Troubleshooting</div>
+            </div>
+        </section>
+
+        <footer>
+            <p>© 2026 Mohamed Elkomy | Professional Portfolio</p>
+        </footer>
+    </div>
+
+</body>
+</html>
